@@ -28,3 +28,9 @@ plt.scatter(bream_length, bream_weight)
 plt.xlabel('length') # x축: 길이
 plt.ylabel('weight') # y축: 무게
 plt.show()
+
+# 3-2. 빙어 데이터 시각화
+plt.scatter(smelt_length, smelt_weight)
+plt.xlabel('length') # x축: 길이
+plt.ylabel('weight') # y축: 무게
+plt.show()
