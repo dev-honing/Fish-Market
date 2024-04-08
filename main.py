@@ -49,3 +49,6 @@ fish_data = [[l, w] for l, w in zip(length, weight)] # zip() 함수로 길이와
 # 곱셈 연산자(*)로 리스트를 반복하여 생성
 fish_target = [1] * 35 + [0] * 14 # 도미 데이터: 35개, 빙어 데이터: 14개
 print(f"타겟 데이터: {fish_target}")
+
+# 4-4. 사이킷런 패키지 불러오기
+from sklearn.neighbors import KNeighborsClassifier # from ~ import 구문을 사용하면 모듈 전체가 아닌, 일부만 불러올 수 있음
