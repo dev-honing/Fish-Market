@@ -56,3 +56,6 @@ from sklearn.neighbors import KNeighborsClassifier # from ~ import 구문을 사
 # 4-5. 객체 생성 및 훈련
 kn = KNeighborsClassifier() # KNeighborsClassifier 객체 생성
 kn.fit(fish_data, fish_target) # fit() 메서드로 훈련 데이터로 모델 훈련
+
+# 4-6. 모델 평가
+print(f"모델 평가: {kn.score(fish_data, fish_target)}") # score() 메서드로 모델 평가(정확도가 1.0이면 100% 정확도)
