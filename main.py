@@ -58,4 +58,15 @@ kn.fit(fish_data, fish_target) # fit() 메서드로 훈련 데이터로 모델 �
 
 # 4-6. 모델 평가
 accuracy = kn.score(fish_data, fish_target)
-print(f"모델 평가: {accuracy}") # score() 메서드로 모델 평가(정확도가 1.0이면 100% 정확도)
+
+# 4-7. 예측
+predict_data = [30, 600]
+predict = kn.predict([predict_data]) # predict() 메서드로 예측
+
+# 그래프에 예측 데이터를 표시
+plt.scatter(predict_data[0], predict_data[1], color='green', marker='^', label='예측') # 예측 데이터 표시
+plt.legend() # 범례 표시
+
+# 예측 결과 출력
+print(f"예측 결과: {'도미' if predict[0] == 1 else '빙어'}") # 삼항 연산자로 예측 결과 출력
+plt.show() # 그래프 출력
