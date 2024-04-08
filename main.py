@@ -44,4 +44,8 @@ weight = bream_weight + smelt_weight # 무게 데이터 병합
 
 # 4-2. 2차원 리스트로 변환
 fish_data = [[l, w] for l, w in zip(length, weight)] # zip() 함수로 길이와 무게 데이터를 묶어 2차원 리스트로 변환
-print(f"2차원 리스트: {fish_data}")
+
+# 4-3. 타겟 데이터 생성 
+# 곱셈 연산자(*)로 리스트를 반복하여 생성
+fish_target = [1] * 35 + [0] * 14 # 도미 데이터: 35개, 빙어 데이터: 14개
+print(f"타겟 데이터: {fish_target}")
