@@ -21,16 +21,18 @@ smelt_length = [9.8, 10.5, 10.6, 11.0, 11.2, 11.3, 11.8, 11.8, 12.0, 12.2, 12.4,
 smelt_weight = [6.7, 7.5, 7.0, 9.7, 9.8, 8.7, 10.0, 9.9, 9.8, 12.2, 13.4, 12.2, 19.7, 19.9]
 
 # 3. 데이터 시각화
-# 3-1. 도미 데이터 시각화
 import matplotlib.pyplot as plt
+plt.rcParams['font.family'] = 'Malgun Gothic'
 
-plt.scatter(bream_length, bream_weight)
-plt.xlabel('length') # x축: 길이
-plt.ylabel('weight') # y축: 무게
-plt.show()
+# 3-1. 도미 데이터 시각화
+plt.scatter(bream_length, bream_weight, color='red', label='도미') # 빨간색으로 도미 데이터 표시
 
 # 3-2. 빙어 데이터 시각화
-plt.scatter(smelt_length, smelt_weight)
-plt.xlabel('length') # x축: 길이
-plt.ylabel('weight') # y축: 무게
-plt.show()
+plt.scatter(smelt_length, smelt_weight, color='blue', label='빙어') # 파란색으로 빙어 데이터 표시
+
+# 제목
+plt.title('이진 분류 - 도미일까, 빙어일까?') # 그래프 제목
+plt.xlabel('생선의 길이') # x축: 길이
+plt.ylabel('생선의 무게') # y축: 무게
+plt.legend() # 범례 표시
+plt.show() # 그래프 출력
