@@ -52,3 +52,7 @@ print(f"타겟 데이터: {fish_target}")
 
 # 4-4. 사이킷런 패키지 불러오기
 from sklearn.neighbors import KNeighborsClassifier # from ~ import 구문을 사용하면 모듈 전체가 아닌, 일부만 불러올 수 있음
+
+# 4-5. 객체 생성 및 훈련
+kn = KNeighborsClassifier() # KNeighborsClassifier 객체 생성
+kn.fit(fish_data, fish_target) # fit() 메서드로 훈련 데이터로 모델 훈련
