@@ -35,4 +35,12 @@ plt.title('이진 분류 - 도미일까, 빙어일까?') # 그래프 제목
 plt.xlabel('생선의 길이') # x축: 길이
 plt.ylabel('생선의 무게') # y축: 무게
 plt.legend() # 범례 표시
-plt.show() # 그래프 출력
+# plt.show() # 그래프 출력
+
+# 4. 최근접 이웃 알고리즘 도입
+# 4-1. 도미와 빙어 데이터 병합
+length = bream_length + smelt_length # 길이 데이터 병합
+weight = bream_weight + smelt_weight # 무게 데이터 병합
+
+print(f"병합된 길이 데이터: {length}")
+print(f"병합된 무게 데이터: {weight}")
