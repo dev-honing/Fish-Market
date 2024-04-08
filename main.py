@@ -30,7 +30,7 @@ plt.scatter(bream_length, bream_weight, color='red', label='도미') # 빨간색
 # 3-2. 빙어 데이터 시각화
 plt.scatter(smelt_length, smelt_weight, color='blue', label='빙어') # 파란색으로 빙어 데이터 표시
 
-# 제목
+# 그래프 설정
 plt.title('이진 분류 - 도미일까, 빙어일까?') # 그래프 제목
 plt.xlabel('생선의 길이') # x축: 길이
 plt.ylabel('생선의 무게') # y축: 무게
