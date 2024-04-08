@@ -42,5 +42,6 @@ plt.legend() # 범례 표시
 length = bream_length + smelt_length # 길이 데이터 병합
 weight = bream_weight + smelt_weight # 무게 데이터 병합
 
-print(f"병합된 길이 데이터: {length}")
-print(f"병합된 무게 데이터: {weight}")
+# 4-2. 2차원 리스트로 변환
+fish_data = [[l, w] for l, w in zip(length, weight)] # zip() 함수로 길이와 무게 데이터를 묶어 2차원 리스트로 변환
+print(f"2차원 리스트: {fish_data}")
