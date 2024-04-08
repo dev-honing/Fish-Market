@@ -89,3 +89,11 @@ accuracy49 = kn49.score(fish_data, fish_target)
 
 # K=49 모델 예측
 predict49 = kn49.predict([predict_data])
+
+# 4-10. 예측 결과 출력 및 비교
+# K=5 모델(기본값)
+print(f"K=5 모델 예측 결과: {'도미' if predict[0] == 1 else '빙어'}") # K=5 모델 예측 결과: 빙어
+
+# K=49 모델
+print(f"K=49 모델 예측 결과: {'도미' if predict49[0] == 1 else '빙어'}") # K=49 모델 예측 결과: 도미
+plt.show() # 그래프 출력
