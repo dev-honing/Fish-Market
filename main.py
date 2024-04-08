@@ -60,7 +60,7 @@ kn.fit(fish_data, fish_target) # fit() 메서드로 훈련 데이터로 모델 �
 accuracy = kn.score(fish_data, fish_target)
 
 # 4-7. 예측
-predict_data = [30, 600]
+predict_data = [20, 10]
 predict = kn.predict([predict_data]) # predict() 메서드로 예측
 
 # 그래프에 예측 데이터를 표시
