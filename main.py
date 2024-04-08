@@ -68,12 +68,24 @@ plt.scatter(predict_data[0], predict_data[1], color='green', marker='^', label='
 plt.legend() # 범례 표시
 
 # 예측 결과 출력
-print(f"예측 결과: {'도미' if predict[0] == 1 else '빙어'}") # 삼항 연산자로 예측 결과 출력
+# print(f"예측 결과: {'도미' if predict[0] == 1 else '빙어'}") # 삼항 연산자로 예측 결과 출력
 # plt.show() # 그래프 출력
 
 # 4-8. K 매개변수 확인
 # get_params() 메서드로 객체의 매개변수 확인
 params = kn.get_params()
 
-print(f"모델의 매개변수: {params}") # 모델의 매개변수: {'algorithm': 'auto', 'leaf_size': 30, 'metric': 'minkowski', 'metric_params': None, 'n_jobs': None, 'n_neighbors': 5, 'p': 2, 'weights': 'uniform'}
-print(f"모델이 참조하는 K-이웃의 수: {params['n_neighbors']}") # n_neighbors 매개변수만 출력
+# print(f"모델의 매개변수: {params}") # 모델의 매개변수: {'algorithm': 'auto', 'leaf_size': 30, 'metric': 'minkowski', 'metric_params': None, 'n_jobs': None, 'n_neighbors': 5, 'p': 2, 'weights': 'uniform'}
+# print(f"모델이 참조하는 K-이웃의 수: {params['n_neighbors']}") # n_neighbors 매개변수만 출력
+
+# 4-9. K 매개변수 변경하고, K=49인 모델 생성
+kn49 = KNeighborsClassifier(n_neighbors=49)
+
+# K=49 모델 훈련
+kn49.fit(fish_data, fish_target)
+
+# K=49 모델 평가
+accuracy49 = kn49.score(fish_data, fish_target)
+
+# K=49 모델 예측
+predict49 = kn49.predict([predict_data])
